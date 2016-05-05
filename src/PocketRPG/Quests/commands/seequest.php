@@ -15,8 +15,7 @@ class seequest extends PluginBase {
   public function onCommand(Command $cmd, CommandSender $p, $label, array $args) {
     switch($cmd->getName()) {
       case "seequest":
-        switch(strtolower(array_shift($args))) {
-          case "1":
+        if($args[0] == "1") {
             if($p->hasPermission("quest.1.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 1 - Helping the Farmer - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 5 pieces of wheat.");
@@ -28,9 +27,9 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
+
             
-          case "2":
+          } elseif($args[0] == "2") {
             if($p->hasPermission("quest.2.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 2 - Not enough Trees - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 16 Saplings.");
@@ -42,9 +41,9 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
+
             
-          case "3":
+          } elseif($args[0] == "3") {
             if($p->hasPermission("quest.3.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 3 - Searching the Stick - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 1 stick.");
@@ -56,9 +55,9 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
 
-          case "4":
+
+          } elseif($args[0] == "4") {
             if($p->hasPermission("quest.4.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 4 - Shearing the Sheep - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 1 shears.");
@@ -70,9 +69,9 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
+
             
-          case "5":
+          } elseif($args[0] == "5") {
             if($p->hasPermission("quest.5.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 5 - The lost Gem - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 1 Emerald.");
@@ -84,9 +83,9 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
+
             
-          case "6":
+          } elseif($args[0] == "6") {
             if($p->hasPermission("quest.6.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 6 - Freezingly Cold - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 32 Ice blocks.");
@@ -98,9 +97,9 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
+
             
-          case "7":
+          } elseif($args[0] == "7") {
             if($p->hasPermission("quest.7.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 7 - Gravedigger - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 5 rotten flesh and 5 bones.");
@@ -112,9 +111,9 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
+
             
-          case "8":
+          } elseif($args[0] == "8") {
             if($p->hasPermission("quest.8.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 8 - Fish Galore - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 16 raw fish.");
@@ -126,9 +125,9 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
+
             
-          case "9":
+          } elseif($args[0] == "9") {
             if($p->hasPermission("quest.9.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 9 - Burning Souls - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 5 blaze powder and 5 blaze rods.");
@@ -140,9 +139,9 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
+
             
-          case "10":
+          } elseif($args[0] == 10) {
             if($p->hasPermission("quest.10.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 10 - The Experiment - Completed!");
               $p->sendMessage(TF:: AQUA . "Collect 10 glowstone and 10 redstone.");
@@ -154,15 +153,11 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
-            break;
-            
-            return true;
-          default:
+
+          } elseif(!isset($args[0])) {
             $p->sendMessage(TF:: RED . "Please type in a quest number.");
+          }
         }
       return true;
-    default:
-      return false;
     }
-  }
 }
