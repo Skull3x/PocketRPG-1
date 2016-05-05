@@ -27,6 +27,7 @@ class warriorsword extends PluginBase implements Listener {
         $damager = $event->getDamager();
         $level = $this->config->get("RPG_LEVEL");
         if($damager->getLevel() == $configlevel) {
+         if($p->hasPermission("class.mage")) {
           if($damager->getItemInHand()->getId() == 267) {
             $x = $hit->x;
             $y = $hit->y;
@@ -35,8 +36,9 @@ class warriorsword extends PluginBase implements Listener {
             $level->addParticle(new CritialParticle($hitpos));
             $this->setKnockBack(2);
           }
+         }
         }
       }
   }
 }
-}
+
