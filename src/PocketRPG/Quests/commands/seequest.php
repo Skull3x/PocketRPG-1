@@ -158,6 +158,6 @@ class seequest extends PluginBase {
             $p->sendMessage(TF:: RED . "Please type in a quest number.");
           }
         }
-      return true;
+      return $cmd;
     }
 }
