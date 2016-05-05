@@ -26,5 +26,6 @@ class partyleave extends PluginBase {
         }
       }
     }
+  return $cmd;
   }
 }
