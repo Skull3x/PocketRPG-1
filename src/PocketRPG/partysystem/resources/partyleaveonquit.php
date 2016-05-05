@@ -13,6 +13,7 @@ class partyleaveonquit extends PluginBase implements Listener {
     $p = $event->getPlayer();
     if($p->hasPermission("party.joined") {
       $p->unsetPermission("party.joined");
+      $p->setNameTag($p->getName());
     }
   }
 }
