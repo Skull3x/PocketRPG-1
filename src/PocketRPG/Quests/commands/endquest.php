@@ -32,7 +32,6 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-              break;
               
           if($args[0] == "2") {
             if($p->hasPermission("quest.2.cancomplete") && $p->getInventory()->getId(6)->getCount() > 15) {
@@ -50,7 +49,6 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-              break;
               
           if($args[0] == "3") {
             if($p->hasPermission("quest.3.cancomplete") && $p->getInventory()->getId(280)->getCount() > 0) {
@@ -68,7 +66,6 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-              break;
               
           if($args[0] == "4") {
             if($p->hasPermission("quest.4.cancomplete") && $p->getInventory()->getId(359)->getCount() > 0) {
@@ -86,7 +83,6 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-              break;
               
           if($args[0] == "5") {
             if($p->hasPermission("quest.5.cancomplete") && $p->getInventory()->getId(388)->getCount() > 0) {
@@ -104,8 +100,7 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-              break;
-              
+             
           if($args[0] == "6") {
             if($p->hasPermission("quest.6.cancomplete") && $p->getInventory()->getId(79)->getCount() > 31) {
               $p->getInventory()->removeItem(79);
@@ -120,7 +115,6 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-              break;
               
           if($args[0] == "7") {
             if($p->hasPermission("quest.7.cancomplete") && $p->getInventory()->getId(352)->getCount() > 4 || $p->getInventory()->getId(367)->getCount() > 4) {
@@ -136,7 +130,6 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-              break;
               
           if($args[0] == "8") {
             if($p->hasPermission("quest.8.cancomplete") && $p->getInventory()->getId(349)->getCount() > 15) {
@@ -152,7 +145,6 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-            break;
             
           if($args[0] == "9") {
             if($p->hasPermission("quest.9.cancomplete") && $p->getInventory()->getId(369)->getCount() > 4 || $p->getInventory()->getId(377)->getCount() > 4) {
@@ -168,7 +160,6 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-            break;
             
           if($args[0] == "10") {
             if($p->hasPermission("quest.10.cancomplete") && $p->getInventory()->getId(348)->getCount() > 9 || $p->getInventory()->getId(331)->getCount() > 9) {
@@ -184,10 +175,7 @@ class endquest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
-            break;
         }
-        return true;
-      default:
-        return false;
+        return $cmd;
      }
   }
