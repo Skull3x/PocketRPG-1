@@ -23,6 +23,7 @@ class partyinvite extends PluginBase {
           if($invited instanceof Player) {
             $p->sendMessage(TF:: AQUA . "You have invited" . $invited->getName() . "To the Party!");
             $p->setPermission("party." . $args[0] . "");
+            $invited->setNameTag($partyname . ":".$p->getName());
           } else {
             $p->sendMessage(TF:: RED . "The player named" . $invited->getName() . "is not online!");
           }
