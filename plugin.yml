@@ -19,4 +19,13 @@ commands:
     usage: /endquest <number>
   rpgstart:
     description: Start your adventure
-    usage: /startrpg <class>
+    usage: /rpgstart <class>
+  partycreate:
+    description: Create a party
+    usage: /partycreate <partyname>
+  partyinvite:
+    description: Invite someone to your party
+    usage: /partyinvite <playername> <partyname>
+  rpgstart:
+    description: Start your adventure
+    usage: /rpgstart <class>
