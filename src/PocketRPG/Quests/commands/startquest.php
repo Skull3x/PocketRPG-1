@@ -129,7 +129,7 @@ class startquest extends PluginBase {
             $p->sendMessage(TF:: RED . "Please specify the number of a quest.");
         }
     }
-  return true;
+  return $cmd;
   }
 }
 
