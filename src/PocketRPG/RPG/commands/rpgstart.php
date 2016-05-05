@@ -16,9 +16,11 @@ class rpgstart extends PluginBase {
   $level = $p->getLevel();
   $cfglevel = $this->config->get("RPG_LEVEL");
   
+
   public function onCommand(Command $cmd, CommandSender $p, $label, array $args) {
     switch($cmd->getName) {
       case "rpgstart":
+                                //default classes:
         if($args[0] == "mage") {
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
@@ -54,19 +56,6 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.tanker");
               $p->switchLevel($level $cfglevel);
             }
-            
-        } elseif($args[0] == "assassin") {
-            if($p->hasPermission("class.chosen")) {
-              $p->sendMessage(TF:: RED . "You have already picked a class!");
-            } else {
-              $p->sendMessage(TF:: AQUA . "You have joined the world as an assassin!");
-              $cloak = Item::get(Item::CLOCK, 0, 1);
-              $knive = Item::get(Item::FEATHER, 0, 1);
-              $p->getInventory->addItem($knive, $cloak);
-              $p->setPermission("class.chosen");
-              $p->setPermission("class.assassin");
-              $p->switchLevel($level $cfglevel);
-            }
           
         } elseif($args[0] == "archer") {
             if($p->hasPermission("class.chosen")) {
@@ -77,6 +66,19 @@ class rpgstart extends PluginBase {
               $p->getInventory->addItem($bow);
               $p->setPermission("class.chosen");
               $p->setPermission("class.archer");
+              $p->switchLevel($level $cfglevel);
+            }
+                                          //Special classes
+        } elseif($args[0] == "assassin") {
+            if($p->hasPermission("class.chosen")) {
+              $p->sendMessage(TF:: RED . "You have already picked a class!");
+            } elseif($p->hasPermission("class.special")) {
+              $p->sendMessage(TF:: AQUA . "You have joined the world as an assassin!");
+              $cloak = Item::get(Item::CLOCK, 0, 1);
+              $knive = Item::get(Item::FEATHER, 0, 1);
+              $p->getInventory->addItem($knive, $cloak);
+              $p->setPermission("class.chosen");
+              $p->setPermission("class.assassin");
               $p->switchLevel($level $cfglevel);
             }
         }
