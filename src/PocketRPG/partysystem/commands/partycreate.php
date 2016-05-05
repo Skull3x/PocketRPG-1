@@ -27,6 +27,6 @@ class partycreate extends PluginBase {
         $p->setNameTag($args[0] . ":".$p->getName());
       }
     }
-  return true;
+  return $cmd;
   }
 }
