@@ -26,6 +26,6 @@ commands:
   partyinvite:
     description: Invite someone to your party
     usage: /partyinvite <playername> <partyname>
-  rpgstart:
+  partyleave:
     description: Start your adventure
-    usage: /rpgstart <class>
+    usage: /partyleave <partyname>
