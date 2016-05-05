@@ -98,6 +98,6 @@ class rpgstart extends PluginBase {
             }
         }
     }
-    return true;
+    return $cmd;
   }
 }
