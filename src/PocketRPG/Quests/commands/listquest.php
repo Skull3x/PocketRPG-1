@@ -146,6 +146,6 @@ class listquest extends PluginBase implements Listener {
             }
           }
         }  
-      return true;
+      return $cmd;
 }
           //adding more quests soon...
