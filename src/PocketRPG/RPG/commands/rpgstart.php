@@ -19,8 +19,7 @@ class rpgstart extends PluginBase {
   public function onCommand(Command $cmd, CommandSender $p, $label, array $args) {
     switch($cmd->getName) {
       case "rpgstart":
-        switch(strtolower(array_shift($args))) {
-          case "mage":
+        if($args[0] == "mage") {
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
             } else {
@@ -31,9 +30,8 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.mage");
               $p->switchLevel($level $cfglevel);
             }
-            break;
             
-          case "warrior":
+        } elseif($args[0] == "warrior") {
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!")
             } else {
@@ -44,9 +42,8 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.warrior");
               $p->switchLevel($level $cfglevel);
             }
-            break;
             
-          case "tanker":
+        } elseif($args[0] == "tanker") {
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
             } else {
@@ -57,9 +54,8 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.tanker");
               $p->switchLevel($level $cfglevel);
             }
-            break;
             
-          case "assassin":
+        } elseif($args[0] == "assassin") {
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
             } else {
@@ -71,9 +67,8 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.assassin");
               $p->switchLevel($level $cfglevel);
             }
-            break;
           
-          case "archer":
+        } elseif($args[0] == "archer") {
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
             } else {
@@ -84,8 +79,8 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.archer");
               $p->switchLevel($level $cfglevel);
             }
-            break;
         }
     }
+    return true;
   }
 }
