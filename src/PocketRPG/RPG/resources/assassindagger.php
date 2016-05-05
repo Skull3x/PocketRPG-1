@@ -42,7 +42,7 @@ class knightknive extends PluginBase implements Listener {
     public function onItemHeld(PlayerItemHeldEvent $event2) {
         $p = $event2->getPlayer();
         if($p->getItemInHand()->getId() == 347) {
-            $effect = Effect::getEffect(14)->setDuration(5)->setAmplifier(1)->setVisible(true);
+            $effect = Effect::getEffect(14)->setDuration(1)->setAmplifier(1)->setVisible(true);
             $p->addEffect($effect);
         }
     }
