@@ -30,5 +30,6 @@ class partyinvite extends PluginBase {
         }
       }
     }
+  return $cmd;
   }
 }
