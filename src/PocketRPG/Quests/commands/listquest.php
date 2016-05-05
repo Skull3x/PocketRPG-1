@@ -14,10 +14,9 @@ use PocketRPG\main;
 class listquest extends PluginBase implements Listener {
   
   public function onCommand(CommandSender $p, Command $cmd, $label, array $args) {
-    switch ($cmd->getName()) {
+    switch($cmd->getName()) {
       case "startquest":
-        switch(strtolower(array_shift($args))) {
-          case "1":     // QUEST PAGE 1
+          if($args[0] == "1") {     // QUEST PAGE 1
             $p->sendMessage(TF::BOLD . DARK_GREEN . "Quests page 1:");
               if($p->hasPermission("quest.1.completed") && $p->getExpLevel() > -1) {
                   $p->sendMessage(TF::GREEN . "1 - Helping the Farmer - lvl. 0");
@@ -58,9 +57,9 @@ class listquest extends PluginBase implements Listener {
               } else {
                   $p->sendMessage(TF::RED . "5 - The lost Gem - lvl. 4");
               }
-            break;
+          }
                               //QUEST PAGE 2
-          case "2":
+          elseif($args[0] == "2") {
             $p->sendMessage(TF::BOLD . DARK_GREEN . "Quests page 2:");
               if($p->hasPermission("quest.6.completed") && $p->getExpLevel() > 4) {
                   $p->sendMessage(TF::GREEN . "6 - Freezingly cold - lvl. 5");
@@ -109,54 +108,9 @@ class listquest extends PluginBase implements Listener {
               } else {
                   $p->sendMessage(TF::RED . "10 - The Experiment - lvl. 9");
               }
-              break;
-              
-                            //QUEST PAGE 1
-          default:
-            $p->sendMessage(TF::BOLD . DARK_GREEN . "Quests page 1:");
-              if($p->hasPermission("quest.1.completed") && $p->getExpLevel() < -1) {
-                  $p->sendMessage(TF::GREEN . "1 - Helping the Farmer - lvl. 0");
-              } elseif($p->getExpLevel()) > -1) {
-                  $p->sendMessage(TF::YELLOW . "1 - Helping the Farmer - lvl. 0");
-              } else {
-                  $p->sendMessage(TF::RED . "1 - Helping the Farmer - lvl. 0");
-              }
-
-              if($p->hasPermission("quest.2.completed") && $p->getExpLevel() < 0) {
-                  $p->sendMessage(TF::GREEN . "2 - Not enough Trees - lvl. 1");
-              } elseif($p->getExpLevel()) > 0) {
-                  $p->sendMessage(TF::YELLOW . "2 - Not enough Trees - lvl. 1");
-              } else {
-                  $p->sendMessage(TF::RED . "3 - Not enough Trees - lvl. 1");
-              }
-          
-              if($p->hasPermission("quest.3.completed") && $p->getExpLevel() < 1) {
-                  $p->sendMessage(TF::GREEN . "3 - Searching the Stick - lvl. 2");
-              } elseif($p->getExpLevel()) > 1) {
-                  $p->sendMessage(TF::YELLOW . "3 - Searching the Stick - lvl. 2");
-              } else {
-                  $p->sendMessage(TF::RED . "3 - Searching the Stick - lvl. 2");
-              }
-          
-              if($p->hasPermission("quest.4.completed") && $p->getExpLevel() < 2) {
-                  $p->sendMessage(TF::GREEN . "4 - Shearing the Sheep - lvl. 3");
-              } elseif($p->getExpLevel()) > 2) {
-                  $p->sendMessage(TF::YELLOW . "4 - Shearing the Sheep - lvl. 3");
-              } else {
-                  $p->sendMessage(TF::RED . "4 - Shearing the Sheep - lvl. 3");
-              }
-
-              if($p->hasPermission("quest.5.completed") && $p->getExpLevel() < 3) {
-                  $p->sendMessage(TF::GREEN . "5 - The lost Gem - lvl. 4");
-              } elseif($p->getExpLevel()) > 3) {
-                  $p->sendMessage(TF::YELLOW . "5 - The lost Gem - lvl. 4");
-              } else {
-                  $p->sendMessage(TF::RED . "5 - The lost Gem - lvl. 4");
-              }
+          }
         }  
       return true;
-    default:
-      return false;
     }
 }
           //adding more quests soon...
