@@ -24,7 +24,7 @@ class partycreate extends PluginBase {
         $p->sendMessage(TF:: AQUA . "You have started a party named $partyname!");
         $p->setPermission("party.joined");
         $p->setPermission("party." . $args[0] . "");
-        $p->setNameTag(" "$args[0]"");
+        $p->setNameTag($args[0] . ":".$p->getName());
       }
     }
   return true;
