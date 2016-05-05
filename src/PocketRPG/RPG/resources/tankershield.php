@@ -28,6 +28,7 @@ class knightknive extends PluginBase implements Listener {
         $damager = $event->getDamager();
         $level = $this->config->get("RPG_LEVEL");
         if($damager->getLevel() == $configlevel) {
+         if($p->hasPermission("class.mage")) {
           if($damager->getItemInHand()->getId() == 328) {
             $x = $hit->x;
             $y = $hit->y;
@@ -37,6 +38,7 @@ class knightknive extends PluginBase implements Listener {
             $this->setKnockBack(3);
             $this->setDamage(getDamage() + 2);
           }
+         }
         }
       }
   }
