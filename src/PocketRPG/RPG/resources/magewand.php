@@ -27,15 +27,17 @@ class magewand extends PluginBase implements Listener {
         $damager = $event->getDamager();
         $level = $this->config->get("RPG_LEVEL");
         if($damager->getLevel() == $configlevel) {
-          if($damager->getItemInHand()->getId() == 280) {
-            $x = $hit->x;
-            $y = $hit->y;
-            $z = $hit->z;
-            $hitpos = $hit->getPosition(new Vector3($x, $y, $z));
-            $level->addParticle(new LavaParticle($hitpos));
-            $this->setKnockBack(1);
-            $hit->setOnFire(4);
-            $this->setDamage(getDamage() + 4)
+          if($p->hasPermission("class.mage")) {
+            if($damager->getItemInHand()->getId() == 280) {
+              $x = $hit->x;
+              $y = $hit->y;
+              $z = $hit->z;
+              $hitpos = $hit->getPosition(new Vector3($x, $y, $z));
+              $level->addParticle(new LavaParticle($hitpos));
+              $this->setKnockBack(1);
+              $hit->setOnFire(4);
+              $this->setDamage(getDamage() + 4)
+            }
           }
         }
       }
