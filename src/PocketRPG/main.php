@@ -28,7 +28,7 @@ use PocketRPG\partysystem\resources\damagestop;
 use PocketRPG\partysystem\resources\partyleaveonquit;
 
 
-class main extends PluginBase {
+class main extends PluginBase implements Listener {
   
   public function onLoad() {
     $this->getLogger()->info("PocketRPG loading!");
