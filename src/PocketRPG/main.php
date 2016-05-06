@@ -5,6 +5,7 @@ namespace PocketRPG;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Server;
+use pocketmine\event\Listener;
 
 use PocketRPG\Quests\commands\endquest;
 use PocketRPG\Quests\commands\listquest;
