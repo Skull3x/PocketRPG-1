@@ -12,10 +12,19 @@ use PocketRPG\Quests\commands\startquest;
 use PocketRPG\Quests\commands\seequest;
 
 use PocketRPG\RPG\commands\rpgstart;
+use PocketRPG\RPG\resources\assassindagger;
+use PocketRPG\RPG\resources\warriorsword;
+use PocketRPG\RPG\resources\magewand;
+use PocketRPG\RPG\resources\tankershield;
+
+use PocketRPG\classchat\classchat;
+use PocketRPG\destroyandplace\preventing;
 
 use PocketRPG\partysystem\commands\partyinvite;
 use PocketRPG\partysystem\commands\partycreate;
 use PocketRPG\partysystem\commands\partyleave;
+use PocketRPG\partysystem\resources\damagestop;
+use PocketRPG\partysystem\resources\partyleaveonquit;
 
 
 class main extends PluginBase {
