@@ -6,26 +6,26 @@ author: Sandertv
 
 commands:
   startquest:
-    description: Start a quest
-    usage: /startquest <number>
+    description: "Start a quest"
+    usage: "/startquest <number>"
   listquest:
-    description: Gives a list of quests
-    usage: /listquest <number>
+    description: "Gives a list of quests"
+    usage: "/listquest <number>"
   seequest:
-    description: See a currently opened quest
-    usage: /seequest <number>
+    description: "See a currently opened quest"
+    usage: "/seequest <number>"
   endquest:
-    description: Finish a quest
-    usage: /endquest <number>
+    description: "Finish a quest"
+    usage: "/endquest <number>"
   rpgstart:
-    description: Start your adventure
-    usage: /rpgstart <class>
+    description: "Start your adventure"
+    usage: "/rpgstart <class>"
   partycreate:
-    description: Create a party
-    usage: /partycreate <partyname>
+    description: "Create a party"
+    usage: "/partycreate <partyname>"
   partyinvite:
-    description: Invite someone to your party
-    usage: /partyinvite <playername> <partyname>
+    description: "Invite someone to your party"
+    usage: "/partyinvite <playername> <partyname>"
   partyleave:
-    description: Start your adventure
-    usage: /partyleave <partyname>
+    description: "Start your adventure"
+    usage: "/partyleave <partyname>"
