@@ -63,9 +63,49 @@ class listquest extends PluginBase implements Listener {
                       $p->sendMessage(TF:: RED . ""$this->config->get("Quest_name_5")" - level 4");
                     }
                   break;
-                  
+                                    //Quest list 2
                   case "2":
                     $p->sendMessage(TF:: BOLD . AQUA . "Quest list 2");
+                    if($p->hasPermission("quest.6.completed")) {
+                      $p->sendMessage(TF:: GREEN . ""$this->config->get("Quest_name_6")" - level 5");
+                    } elseif($p->hasPermission("quest.6.cancomplete")) {
+                      $p->sendMessage(TF:: YELLOW . ""$this->config->get("Quest_name_6")" - level 5");
+                    } else {
+                      $p->sendMessage(TF:: RED . ""$this->config->get("Quest_name_6")" - level 5");
+                    }
+                    
+                    if($p->hasPermission("quest.7.completed")) {
+                      $p->sendMessage(TF:: GREEN . ""$this->config->get("Quest_name_7")" - level 6");
+                    } elseif($p->hasPermission("quest.7.cancomplete")) {
+                      $p->sendMessage(TF:: YELLOW . ""$this->config->get("Quest_name_7")" - level 6");
+                    } else {
+                      $p->sendMessage(TF:: RED . ""$this->config->get("Quest_name_7")" - level 6");
+                    }
+                    
+                    if($p->hasPermission("quest.8.completed")) {
+                      $p->sendMessage(TF:: GREEN . ""$this->config->get("Quest_name_8")" - level 7");
+                    } elseif($p->hasPermission("quest.8.cancomplete")) {
+                      $p->sendMessage(TF:: YELLOW . ""$this->config->get("Quest_name_8")" - level 7");
+                    } else {
+                      $p->sendMessage(TF:: RED . ""$this->config->get("Quest_name_8")" - level 7");
+                    }
+                    
+                    if($p->hasPermission("quest.9.completed")) {
+                      $p->sendMessage(TF:: GREEN . ""$this->config->get("Quest_name_9")" - level 8");
+                    } elseif($p->hasPermission("quest.9.cancomplete")) {
+                      $p->sendMessage(TF:: YELLOW . ""$this->config->get("Quest_name_9")" - level 8");
+                    } else {
+                      $p->sendMessage(TF:: RED . ""$this->config->get("Quest_name_9")" - level 8");
+                    }
+                    
+                    if($p->hasPermission("quest.10.completed")) {
+                      $p->sendMessage(TF:: GREEN . ""$this->config->get("Quest_name_10")" - level 9");
+                    } elseif($p->hasPermission("quest.10.cancomplete")) {
+                      $p->sendMessage(TF:: YELLOW . ""$this->config->get("Quest_name_10")" - level 9");
+                    } else {
+                      $p->sendMessage(TF:: RED . ""$this->config->get("Quest_name_10")" - level 9");
+                    }
+                  break;
                 }
               } else {
                 $p->sendMessage(TF:: RED . "Please specify a list number");
