@@ -6,29 +6,15 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Server;
 use pocketmine\event\Listener;
-
-use PocketRPG\Quests\commands\endquest;
-use PocketRPG\Quests\commands\listquest;
-use PocketRPG\Quests\commands\startquest;
-use PocketRPG\Quests\commands\seequest;
-
-use PocketRPG\RPG\commands\rpgstart;
-use PocketRPG\RPG\resources\assassindagger;
-use PocketRPG\RPG\resources\warriorsword;
-use PocketRPG\RPG\resources\magewand;
-use PocketRPG\RPG\resources\tankershield;
-
-use PocketRPG\classchat\classchat;
-use PocketRPG\destroyandplace\preventing;
-
-use PocketRPG\partysystem\commands\partyinvite;
-use PocketRPG\partysystem\commands\partycreate;
-use PocketRPG\partysystem\commands\partyleave;
-use PocketRPG\partysystem\resources\damagestop;
-use PocketRPG\partysystem\resources\partyleaveonquit;
-
+use pocketmine\Player;
 
 class main extends PluginBase implements Listener {
+  
+  public function __construct(Main $plugin, Player $p) {
+    parent::__construct($plugin);
+    $this->plugin = $plugin;
+    $this->player = $p;
+  }
   
   public function onLoad() {
     $this->getLogger()->info("PocketRPG loading!");
