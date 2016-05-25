@@ -1,3 +1,4 @@
+---
 name: PocketRPG
 main: PocketRPG\main
 version: 0.0.9
@@ -29,3 +30,4 @@ commands:
   partyleave:
     description: "Start your adventure"
     usage: "/partyleave <partyname>"
+...
