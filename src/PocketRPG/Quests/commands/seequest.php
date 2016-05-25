@@ -20,7 +20,7 @@ class seequest extends PluginBase {
           case "1":
             if($p->hasPermission("quest.1.completed")) {
               $p->sendMessage(TF:: GREEN . "Quest 1 - " . $this->config->get("Quest_name_1") . " - Completed!");
-              $p->sendMessage(TF:: AQUA . "Collect " . $this->config->get("Amount_for_finish") . " pieces of wheat.");
+              $p->sendMessage(TF:: AQUA . "Collect " . $this->config->get("Amount_for_finish") . " pieces of " . $this->config->get("Item_for_finish_1") . "");
               $p->sendMessage(TF:: GREEN . "lvl. 0");
             } elseif($p->hasPermission("quest.1.cancomplete") && $p->getExpLevel() > -1) {
               $p->sendMessage(TF:: YELLOW . "Quest 1 - Helping the Farmer - Uncompleted!");
