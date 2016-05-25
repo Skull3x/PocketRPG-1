@@ -18,8 +18,8 @@ class endquest extends PluginBase {
       case "endquest":
         switch($args[0]) {
           case "1":
-              if($p->hasPermission("quest.1.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_1"))->getCount() >= $this->config->get("Amount_finish_1")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_1"));
+              if($p->hasPermission("quest.1.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_1"))->getCount() >= $this->config->get("Amount_finish_1")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_1"));
               $p->setPermission("quest.1.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
@@ -36,8 +36,8 @@ class endquest extends PluginBase {
             break;
 
           case "2":
-              if($p->hasPermission("quest.2.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_2"))->getCount() >= $this->config->get("Amount_finish_2")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_2"));
+              if($p->hasPermission("quest.2.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_2"))->getCount() >= $this->config->get("Amount_finish_2")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_2"));
               $p->setPermission("quest.2.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
@@ -54,8 +54,8 @@ class endquest extends PluginBase {
             break;
             
           case "3":
-              if($p->hasPermission("quest.3.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_3"))->getCount() >= $this->config->get("Amount_finish_3")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_3"));
+              if($p->hasPermission("quest.3.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_3"))->getCount() >= $this->config->get("Amount_finish_3")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_3"));
               $p->setPermission("quest.3.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
@@ -72,8 +72,8 @@ class endquest extends PluginBase {
             break;
             
           case "4":
-              if($p->hasPermission("quest.4.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_4"))->getCount() >= $this->config->get("Amount_finish_4")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_4"));
+              if($p->hasPermission("quest.4.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_4"))->getCount() >= $this->config->get("Amount_finish_4")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_4"));
               $p->setPermission("quest.4.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
@@ -90,8 +90,8 @@ class endquest extends PluginBase {
             break;
             
           case "5":
-              if($p->hasPermission("quest.5.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_5"))->getCount() >= $this->config->get("Amount_finish_5")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_3"));
+              if($p->hasPermission("quest.5.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_5"))->getCount() >= $this->config->get("Amount_finish_5")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_3"));
               $p->setPermission("quest.5.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
@@ -108,8 +108,8 @@ class endquest extends PluginBase {
             break;
             
           case "6":
-              if($p->hasPermission("quest.6.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_6"))->getCount() >= $this->config->get("Amount_finish_6")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_6"));
+              if($p->hasPermission("quest.6.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_6"))->getCount() >= $this->config->get("Amount_finish_6")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_6"));
               $p->setPermission("quest.6.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
@@ -126,8 +126,8 @@ class endquest extends PluginBase {
             break;
             
           case "7":
-              if($p->hasPermission("quest.7.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_7"))->getCount() >= $this->config->get("Amount_finish_7")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_7"));
+              if($p->hasPermission("quest.7.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_7"))->getCount() >= $this->config->get("Amount_finish_7")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_7"));
               $p->setPermission("quest.7.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
@@ -144,8 +144,8 @@ class endquest extends PluginBase {
             break;
             
           case "8":
-              if($p->hasPermission("quest.8.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_8"))->getCount() >= $this->config->get("Amount_finish_8")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_8"));
+              if($p->hasPermission("quest.8.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_8"))->getCount() >= $this->config->get("Amount_finish_8")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_8"));
               $p->setPermission("quest.8.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
@@ -162,8 +162,8 @@ class endquest extends PluginBase {
             break;
             
           case "9":
-              if($p->hasPermission("quest.9.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_9"))->getCount() >= $this->config->get("Amount_finish_9")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_9"));
+              if($p->hasPermission("quest.9.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_9"))->getCount() >= $this->config->get("Amount_finish_9")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_9"));
               $p->setPermission("quest.9.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
@@ -180,8 +180,8 @@ class endquest extends PluginBase {
             break;
             
           case "10":
-              if($p->hasPermission("quest.10.cancomplete") && $p->getInventory()->getId($this->config->get("Item_for_finish_10"))->getCount() >= $this->config->get("Amount_finish_10")) {
-              $p->getInventory()->removeItem($this->config->get("Item_for_finish_10"));
+              if($p->hasPermission("quest.10.cancomplete") && $p->getInventory()->getId($this->config->get("ItemID_for_finish_10"))->getCount() >= $this->config->get("Amount_finish_10")) {
+              $p->getInventory()->removeItem($this->config->get("ItemID_for_finish_10"));
               $p->setPermission("quest.10.completed");
               $p->addExpLevel(1);
               $p->sendMessage(TF:: GREEN . "Congratulations, you have completed the quest!");
