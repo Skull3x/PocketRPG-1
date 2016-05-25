@@ -29,7 +29,11 @@ class seequest extends PluginBase {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+          break;
+          return true;
         }
+      break;
+    return true;
     }
   }
 }
