@@ -202,3 +202,5 @@ class endquest extends PluginBase {
     }
   }
 }
+
+?>
