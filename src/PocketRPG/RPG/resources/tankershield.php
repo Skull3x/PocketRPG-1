@@ -26,8 +26,8 @@ class knightknive extends PluginBase implements Listener {
       if($event instanceof EntityDamageByEntityEvent && $event->getDamager() instanceof Player) {
         $hit = $event->getEntity();
         $damager = $event->getDamager();
-        $level = $this->config->get("RPG_LEVEL");
-        if($damager->getLevel() == $configlevel) {
+        $configlevel = $this->config->get("RPG_LEVEL");
+        if($damager->getLevelByName() == $configlevel) {
          if($p->hasPermission("class.tanker")) {
           if($damager->getItemInHand()->getId() == 328) {
             $x = $hit->x;
@@ -45,10 +45,12 @@ class knightknive extends PluginBase implements Listener {
     public function onItemHeld(PlayerItemHeldEvent $event2) {
         $p = $event2->getPlayer();
         if($p->getItemInHand()->getId() == 328) {
+        if($p->getLevelByName() == $configlevel) {
          if($p->hasPermission("class.tanker")) {
             $effect = Effect::getEffect(11)->setDuration(5)->setAmplifier(2)->setVisible(true);
             $p->addEffect($effect);
          }
+        }
         }
     }
 }
