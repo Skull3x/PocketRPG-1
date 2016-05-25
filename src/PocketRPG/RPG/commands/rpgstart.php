@@ -109,3 +109,4 @@ class rpgstart extends PluginBase {
     }
   }
 }
+?>
