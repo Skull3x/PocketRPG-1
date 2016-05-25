@@ -26,7 +26,7 @@ class magewand extends PluginBase implements Listener {
         $hit = $event->getEntity();
         $damager = $event->getDamager();
         $level = $this->config->get("RPG_LEVEL");
-        if($damager->getLevel() == $configlevel) {
+        if($damager->getLevelByName() == $configlevel) {
           if($p->hasPermission("class.mage")) {
             if($damager->getItemInHand()->getId() == 280) {
               $x = $hit->x;
