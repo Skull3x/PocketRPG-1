@@ -10,6 +10,7 @@ ItemID_for_finish_1: "265"
 #Same item as above but as item name:
 Item_for_finish_1: "Iron ingot"
 Amount_finish_1: "1"
+#Capital letters and _ for space item name:
 Reward_quest_1: "GOLD_INGOT"
 Amount_reward_1: "10"
 
@@ -18,6 +19,7 @@ ItemID_for_finish_2: "265"
 #Same item as above but as item name:
 Item_for_finish_1: "Iron ingot"
 Amount_finish_2: "1"
+#Capital letters and _ for space item name:
 Reward_quest_2: "GOLD_INGOT"
 Amount_reward_2: "10"
 
