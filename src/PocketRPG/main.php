@@ -10,7 +10,7 @@ use pocketmine\Player;
 
 class main extends PluginBase implements Listener {
   
-  public function __construct(Main $plugin, Player $p) {
+  public function __construct(main $plugin, Player $p) {
     parent::__construct($plugin);
     $this->plugin = $plugin;
     $this->player = $p;
