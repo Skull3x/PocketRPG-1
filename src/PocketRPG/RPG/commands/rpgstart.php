@@ -20,8 +20,8 @@ class rpgstart extends PluginBase {
   public function onCommand(Command $cmd, CommandSender $p, $label, array $args) {
     switch($cmd->getName) {
       case "rpgstart":
-                                //default classes:
-        if($args[0] == "mage") {
+        switch($args[0]) {                        //default classes:
+          case "mage":
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
             } else {
@@ -32,10 +32,11 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.mage");
               $p->switchLevel($level $cfglevel);
             }
+            break;
             
-        } elseif($args[0] == "warrior") {
+          case "warrior":
             if($p->hasPermission("class.chosen")) {
-              $p->sendMessage(TF:: RED . "You have already picked a class!")
+              $p->sendMessage(TF:: RED . "You have already picked a class!");
             } else {
               $p->sendMessage(TF:: AQUA . "You have joined the world as a warrior!");
               $sword = Item::get(Item::IRON_SWORD, 0, 1);
@@ -44,8 +45,9 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.warrior");
               $p->switchLevel($level $cfglevel);
             }
+            break;
             
-        } elseif($args[0] == "tanker") {
+          case "tanker":
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
             } else {
@@ -56,12 +58,13 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.tanker");
               $p->switchLevel($level $cfglevel);
             }
-          
-        } elseif($args[0] == "archer") {
+            break;
+   
+          case "archer":
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
             } else {
-              $p->sendMessage(TF:: AQUA . "You have joined the world as an assassin!");
+              $p->sendMessage(TF:: AQUA . "You have joined the world as an archer!");
               $bow = Item::get(Item::BOW, 0, 1);
               $arrows = Item::get(Item::ARROW, 0, 128);
               $p->getInventory->addItem($bow);
@@ -70,8 +73,9 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.archer");
               $p->switchLevel($level $cfglevel);
             }
+            break;
                                           //Special classes
-        } elseif($args[0] == "assassin") {
+          case "assassin":
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
             } elseif($p->hasPermission("class.special")) {
@@ -84,8 +88,9 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.assassin");
               $p->switchLevel($level $cfglevel);
             }
+            break;
         
-        } elseif($args[0] == "thief") {
+          case "thief":
             if($p->hasPermission("class.chosen")) {
               $p->sendMessage(TF:: RED . "You have already picked a class!");
             } elseif($p->hasPermission("class.special")) {
@@ -96,8 +101,11 @@ class rpgstart extends PluginBase {
               $p->setPermission("class.thief");
               $p->switchLevel($level $cfglevel);
             }
+            break;
+        return true;
         }
+      break;
+    return true;
     }
-    return $cmd;
   }
 }
