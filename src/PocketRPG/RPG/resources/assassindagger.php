@@ -27,7 +27,7 @@ public function onFight(EntityDamageEvent $event) {
         $hit = $event->getEntity();
         $damager = $event->getDamager();
         $cfglevel = $this->config->get("RPG_LEVEL");
-        if($damager->getLevel() == $cfglevel) {
+        if($damager->getLevelByName() == $cfglevel) {
             if($p->hasPermission("class.assassin")) {
                 if($damager->getItemInHand()->getId() == 388) {
                 $x = $hit->x;
@@ -43,7 +43,7 @@ public function onFight(EntityDamageEvent $event) {
 }
     public function onItemHeld(PlayerItemHeldEvent $event2) {
         $p = $event2->getPlayer();
-        if($p->getLevel() == $cfglevel) {
+        if($p->getLevelByName() == $cfglevel) {
             if($p->getItemInHand()->getId() == 347) {
                 if($p->hasPermission("class.assassin")) {
                     $effect = Effect::getEffect(14)->setDuration(1)->setAmplifier(1)->setVisible(true);
