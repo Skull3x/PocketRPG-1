@@ -15,12 +15,9 @@ class listquest extends PluginBase implements Listener {
   
   public function onCommand(CommandSender $p, Command $cmd, $label, array $args) {
     switch($cmd->getName()) {
-      case "quest":
-        if(isset($args[0])) {
-          switch($args[0]) {
-            case "list":
-              if(is_numeric($args[1])) {
-                switch($args[1]) {
+      case "listquest":
+              if(is_numeric($args[0])) {
+                switch($args[0]) {
                   case "1":       //Quest list one (5 quests)
                     $p->sendMessage(TF:: BOLD . AQUA . "Quest list 1");
                     if($p->hasPermission("quest.1.completed")) {
