@@ -16,7 +16,7 @@ class preventing extends PluginBase implements Listener {
     $cfglevel = $this->config->get("RPG_LEVEL");
     $p = $event->getPlayer();
     if($p instanceof Player) {
-      if($p->getLevel() == $cfglevel) {
+      if($p->getLevelByName() == $cfglevel) {
         $event->setCancelled();
         $p->sendMessage(TF:: RED . "You are not allowed to do that here.");
       }
@@ -26,10 +26,11 @@ class preventing extends PluginBase implements Listener {
   public function onPlace(BlockPlaceEvent $event2) {
     $p = $event2->getPlayer();
     if($p instanceof Player) {
-      if($p->getLevel() == $cfglevel) {
+      if($p->getLevelByName() == $cfglevel) {
         $event2->setCancelled();
         $p->sendMessage(TF:: RED . "You are not allowed to do that here.")
       }
     }
   }
 }
+?>
