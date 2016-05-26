@@ -16,7 +16,7 @@ class classchat extends PluginBase implements Listener {
   public function onChat(PlayerChatEvent $event) {
     $p = $event->getPlayer();
     $rpglevel = $this->config->get("RPG_LEVEL");
-    if($p->getLevel() == $rpglevel) {
+    if($p->getLevelByName() == $rpglevel) {
       if($p->hasPermission("class.mage")) {
         $this->getServer()->broadcastMessage("<$player->getName()> Mage > $event->getMessage()");
         $event->setCancelled();
@@ -29,8 +29,8 @@ class classchat extends PluginBase implements Listener {
       } elseif($p->hasPermission("class.assassin")) {
         $this->getServer()->broadcastMessage("<$player->getName()> Assassin > $event->getMessage()");
         $event->setCancelled();
-      } else {
       }
     }
   }
 }
+?>
