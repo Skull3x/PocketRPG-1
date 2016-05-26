@@ -18,7 +18,7 @@ class rpgstart extends PluginBase {
   
 
   public function onCommand(Command $cmd, CommandSender $p, $label, array $args) {
-    switch($cmd->getName) {
+    switch($cmd->getName()) {
       case "rpgstart":
         switch($args[0]) {                        //default classes:
           case "mage":
