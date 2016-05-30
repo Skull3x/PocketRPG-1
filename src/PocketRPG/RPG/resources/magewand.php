@@ -43,3 +43,4 @@ class magewand extends PluginBase implements Listener {
       }
   }
 }
+?>
