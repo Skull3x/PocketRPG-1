@@ -53,3 +53,4 @@ public function onFight(EntityDamageEvent $event) {
         }
     }
 }
+?>
