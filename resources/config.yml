@@ -4,7 +4,7 @@
 #level you want the RPG to work in:
 RPG_LEVEL:
 
-#Amount of gold people will earn for completing a quest:
+#Everything you can configure per quest:
 Quest_name_1: "quest 1"
 ItemID_for_finish_1: "265"
 #Same item as above but as item name:
