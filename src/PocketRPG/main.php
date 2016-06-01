@@ -25,9 +25,5 @@ class main extends PluginBase implements Listener {
   public function onDisable() {
     $this->getLogger()->info("Disabling PocketRPG!");
   }
-    
-  public function getPlayer(){
-    return $this->player;
-  }
 }
 ?>
